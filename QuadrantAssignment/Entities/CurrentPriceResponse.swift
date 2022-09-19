@@ -12,6 +12,36 @@ struct CurrentPriceResponse: Codable {
     let time: Time
     let disclaimer, chartName: String
     let bpi: Bpi
+    
+    func saveDailyPriceTrend(dailyPriceTrend: inout [Double]) {
+        let newValue = bpi.usd.rateFloat
+        guard dailyPriceTrend.count > 12 else {
+            dailyPriceTrend.append(newValue)
+            return
+        }
+        
+        dailyPriceTrend.removeFirst()
+        dailyPriceTrend.insert(newValue, at: 11)
+    }
+    
+    func saveLatestDetailPrice(detailPrice: inout [DetailPriceData],
+                               lat: Double = 0,
+                               long: Double = 0) {
+        let newValue = DetailPriceData(
+            timeString: time.updated,
+            price: bpi.usd.rate,
+            long: long,
+            lat: lat
+        )
+        
+        guard detailPrice.count > 5 else {
+            detailPrice.append(newValue)
+            return
+        }
+        
+        detailPrice.removeFirst()
+        detailPrice.insert(newValue, at: 4)
+    }
 }
 
 // MARK: - Bpi
@@ -40,6 +70,6 @@ struct Eur: Codable {
 // MARK: - Time
 struct Time: Codable {
     let updated: String
-    let updatedISO: Date
+    let updatedISO: String
     let updateduk: String
 }

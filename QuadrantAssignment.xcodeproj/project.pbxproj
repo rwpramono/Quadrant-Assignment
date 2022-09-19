@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		002FBB8828D757B500F7688F /* DetailPriceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002FBB8728D757B500F7688F /* DetailPriceData.swift */; };
+		002FBB8A28D7632600F7688F /* BackgroundTasksFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002FBB8928D7632600F7688F /* BackgroundTasksFunction.swift */; };
+		002FBB8C28D7CC2B00F7688F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002FBB8B28D7CC2B00F7688F /* AppDelegate.swift */; };
+		002FBB8F28D7D2A200F7688F /* CurrentPriceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002FBB8E28D7D2A200F7688F /* CurrentPriceAPI.swift */; };
+		002FBB9128D7E8DE00F7688F /* Optional+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002FBB9028D7E8DE00F7688F /* Optional+Ext.swift */; };
+		002FBCA928D7EDF200F7688F /* LocationServiceErrorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002FBCA728D7EDD600F7688F /* LocationServiceErrorTest.swift */; };
 		0038036628D4B9E6004BBF2B /* Quadrant_AssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038036528D4B9E6004BBF2B /* Quadrant_AssignmentApp.swift */; };
 		0038036828D4B9E6004BBF2B /* CurrentPriceContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0038036728D4B9E6004BBF2B /* CurrentPriceContentView.swift */; };
 		0038036A28D4B9E9004BBF2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0038036928D4B9E9004BBF2B /* Assets.xcassets */; };
@@ -28,6 +34,9 @@
 		00EA561128D6872E0003A23A /* ServiceProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA561028D6872E0003A23A /* ServiceProviderTest.swift */; };
 		00EA561428D687700003A23A /* NetworkServiceSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA561328D687700003A23A /* NetworkServiceSpy.swift */; };
 		00EA561728D687930003A23A /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA561628D687930003A23A /* URLProtocolMock.swift */; };
+		00EA561A28D747C40003A23A /* LocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA561928D747C40003A23A /* LocationProtocol.swift */; };
+		00EA561C28D748AF0003A23A /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA561B28D748AF0003A23A /* LocationService.swift */; };
+		00EA561E28D74A9A0003A23A /* LocationServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EA561D28D74A9A0003A23A /* LocationServiceError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		002FBB8728D757B500F7688F /* DetailPriceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPriceData.swift; sourceTree = "<group>"; };
+		002FBB8928D7632600F7688F /* BackgroundTasksFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTasksFunction.swift; sourceTree = "<group>"; };
+		002FBB8B28D7CC2B00F7688F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		002FBB8E28D7D2A200F7688F /* CurrentPriceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPriceAPI.swift; sourceTree = "<group>"; };
+		002FBB9028D7E8DE00F7688F /* Optional+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Ext.swift"; sourceTree = "<group>"; };
+		002FBCA728D7EDD600F7688F /* LocationServiceErrorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceErrorTest.swift; sourceTree = "<group>"; };
 		0038036228D4B9E6004BBF2B /* QuadrantAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuadrantAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0038036528D4B9E6004BBF2B /* Quadrant_AssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quadrant_AssignmentApp.swift; sourceTree = "<group>"; };
 		0038036728D4B9E6004BBF2B /* CurrentPriceContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentPriceContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +81,9 @@
 		00EA561028D6872E0003A23A /* ServiceProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProviderTest.swift; sourceTree = "<group>"; };
 		00EA561328D687700003A23A /* NetworkServiceSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceSpy.swift; sourceTree = "<group>"; };
 		00EA561628D687930003A23A /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
+		00EA561928D747C40003A23A /* LocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationProtocol.swift; sourceTree = "<group>"; };
+		00EA561B28D748AF0003A23A /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		00EA561D28D74A9A0003A23A /* LocationServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +104,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		002FBB8D28D7D28000F7688F /* CurrentPriceAPI */ = {
+			isa = PBXGroup;
+			children = (
+				002FBB8E28D7D2A200F7688F /* CurrentPriceAPI.swift */,
+			);
+			path = CurrentPriceAPI;
+			sourceTree = "<group>";
+		};
+		002FBCA628D7EDAB00F7688F /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				002FBCA728D7EDD600F7688F /* LocationServiceErrorTest.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
 		0038035928D4B9E6004BBF2B = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0038036528D4B9E6004BBF2B /* Quadrant_AssignmentApp.swift */,
+				002FBB8B28D7CC2B00F7688F /* AppDelegate.swift */,
 			);
 			path = Applications;
 			sourceTree = "<group>";
@@ -149,6 +184,7 @@
 		0038039228D4BED7004BBF2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				00EA561828D7469D0003A23A /* LocationService */,
 				00EA560428D686300003A23A /* PreferenceService */,
 				00EA55F828D685710003A23A /* NetworkService */,
 				00EA55F628D685570003A23A /* ServicesProvider.swift */,
@@ -160,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				0038039028D4BEA9004BBF2B /* CurrentPriceResponse.swift */,
+				002FBB8728D757B500F7688F /* DetailPriceData.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -184,6 +221,8 @@
 		00EA55F228D67E530003A23A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				002FBB8928D7632600F7688F /* BackgroundTasksFunction.swift */,
+				002FBB9028D7E8DE00F7688F /* Optional+Ext.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -201,6 +240,7 @@
 		00EA55F828D685710003A23A /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
+				002FBB8D28D7D28000F7688F /* CurrentPriceAPI */,
 				00EA55F928D6857A0003A23A /* API */,
 				00EA55FE28D685F40003A23A /* NetworkProtocol.swift */,
 				00EA560028D686070003A23A /* NetworkService.swift */,
@@ -230,6 +270,7 @@
 		00EA560928D6866C0003A23A /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				002FBCA628D7EDAB00F7688F /* LocationService */,
 				00EA560D28D6869A0003A23A /* NetworkService */,
 				00EA561028D6872E0003A23A /* ServiceProviderTest.swift */,
 			);
@@ -259,6 +300,16 @@
 				00EA561628D687930003A23A /* URLProtocolMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		00EA561828D7469D0003A23A /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				00EA561928D747C40003A23A /* LocationProtocol.swift */,
+				00EA561B28D748AF0003A23A /* LocationService.swift */,
+				00EA561D28D74A9A0003A23A /* LocationServiceError.swift */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,19 +414,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				00EA560128D686070003A23A /* NetworkService.swift in Sources */,
+				00EA561E28D74A9A0003A23A /* LocationServiceError.swift in Sources */,
 				00EA560328D6861D0003A23A /* NetworkServiceError.swift in Sources */,
+				002FBB8828D757B500F7688F /* DetailPriceData.swift in Sources */,
 				00EA560828D686460003A23A /* PreferenceWrapper.swift in Sources */,
+				002FBB8F28D7D2A200F7688F /* CurrentPriceAPI.swift in Sources */,
 				0038039628D4BFFC004BBF2B /* CurrentPriceViewModel.swift in Sources */,
 				00EA560628D686380003A23A /* PreferenceService.swift in Sources */,
+				002FBB8A28D7632600F7688F /* BackgroundTasksFunction.swift in Sources */,
+				00EA561A28D747C40003A23A /* LocationProtocol.swift in Sources */,
 				00EA55FD28D685900003A23A /* APIDataV1.swift in Sources */,
 				00EA55FF28D685F40003A23A /* NetworkProtocol.swift in Sources */,
 				0080DBE828D5C4BA00C60CEC /* LineChartView.swift in Sources */,
 				0038039128D4BEA9004BBF2B /* CurrentPriceResponse.swift in Sources */,
+				00EA561C28D748AF0003A23A /* LocationService.swift in Sources */,
 				0038036828D4B9E6004BBF2B /* CurrentPriceContentView.swift in Sources */,
 				00EA55F728D685570003A23A /* ServicesProvider.swift in Sources */,
 				00EA55F128D637B90003A23A /* PriceListViews.swift in Sources */,
 				00EA55FB28D685870003A23A /* APIDataProtocol.swift in Sources */,
 				0038036628D4B9E6004BBF2B /* Quadrant_AssignmentApp.swift in Sources */,
+				002FBB8C28D7CC2B00F7688F /* AppDelegate.swift in Sources */,
+				002FBB9128D7E8DE00F7688F /* Optional+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +447,7 @@
 				00EA561428D687700003A23A /* NetworkServiceSpy.swift in Sources */,
 				00EA561128D6872E0003A23A /* ServiceProviderTest.swift in Sources */,
 				00EA560C28D686820003A23A /* NetworkServiceErrorTest.swift in Sources */,
+				002FBCA928D7EDF200F7688F /* LocationServiceErrorTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +588,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuadrantAssignment/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "App Uses Location Services to allow background operations while performing long running tasks, this insures data integrity on our side, and offers a better user experience";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Uses Location Services to allow background operations while performing long running tasks, this insures data integrity on our side, and offers a better user experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +620,8 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = QuadrantAssignment/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "App Uses Location Services to allow background operations while performing long running tasks, this insures data integrity on our side, and offers a better user experience";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "App Uses Location Services to allow background operations while performing long running tasks, this insures data integrity on our side, and offers a better user experience";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

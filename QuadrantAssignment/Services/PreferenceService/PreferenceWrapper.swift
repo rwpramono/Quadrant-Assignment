@@ -8,7 +8,7 @@
 import Foundation
 
 @propertyWrapper
-struct PreferenceWrapper<Value> {
+struct PreferenceWrapper<Value: Codable> {
     let key: String
     let defaultValue: Value
     
@@ -25,12 +25,21 @@ struct PreferenceWrapper<Value> {
             let propertyWrapper = instance[keyPath: storageKeyPath]
             let key = propertyWrapper.key
             let defaultValue = propertyWrapper.defaultValue
-            return instance.container.object(forKey: key) as? Value ?? defaultValue
+            
+            guard let data = instance.container.object(forKey: key) as? Data,
+                  let value = try? JSONDecoder().decode(Value.self, from: data) else {
+                return defaultValue
+            }
+
+            return value
         }
+        
         set {
             let propertyWrapper = instance[keyPath: storageKeyPath]
             let key = propertyWrapper.key
-            instance.container.set(newValue, forKey: key)
+            
+            let data = try? JSONEncoder().encode(newValue)
+            instance.container.set(data, forKey: key)
         }
     }
 }

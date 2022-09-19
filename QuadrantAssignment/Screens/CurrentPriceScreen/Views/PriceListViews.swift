@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct PriceListViews: View {
-    var data: CGFloat
+    var data: DetailPriceData
     
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading, spacing: 8) {
-                Text("Price: \(123123.123)")
+                Text("Price: \(data.price)")
 
-                Text("Longitude: \(123123.123)")
+                Text("Longitude: \(data.long)")
                 
-                Text("Latitude: \(123123.123)")
+                Text("Latitude: \(data.lat)")
 
             }
             Spacer()
-            Text("Time: \(123123.123)")
+            Text("Time: \(data.timeString)")
         }
         .padding(.vertical, 8)
     }

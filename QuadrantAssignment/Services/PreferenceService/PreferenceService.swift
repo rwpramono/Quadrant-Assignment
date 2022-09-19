@@ -14,6 +14,9 @@ open class PreferenceService {
         self.container = container
     }
 
-    @PreferenceWrapper(key: "favorite_category", defaultValue: "")
-    var favoriteCategory: String
+    @PreferenceWrapper(key: "daily_price_trend", defaultValue: [0])
+    var dailyPriceTrend: [Double]
+    
+    @PreferenceWrapper(key: "latest_detail_price", defaultValue: [])
+    var latestDetailPrice: [DetailPriceData]
 }

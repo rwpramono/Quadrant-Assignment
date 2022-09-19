@@ -7,40 +7,39 @@
 
 import SwiftUI
 
-struct CurrentPriceContentView: View {
-    var viewModel: CurrentPriceViewModel
+internal struct CurrentPriceContentView: View {
+    @StateObject var viewModel: CurrentPriceViewModel
     
+    init(viewModel: CurrentPriceViewModel) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+    }
+
     var body: some View {
         VStack {
             VStack(spacing: 10) {
-                Text("Price Index")
-                    .fontWeight(.bold)
-                
-                Text("$ 51 200")
+                Text("Bitcoin Price Index")
                     .font(.system(size: 38, weight: .bold))
+                Spacer()
             }
             .padding(.top, 48)
             
-            
-            // Graph View
-            LineChartView(data: samplePlot)
+            LineChartView(data: viewModel.dailyPriceTrend)
                 .frame(height: 200)
-                .padding(.top, 25)
                 .background(Color.white)
                 .cornerRadius(18)
             
             ScrollView {
-                ForEach(samplePlot, id: \.self) {
+                ForEach(viewModel.detailPriceDatas, id: \.self) {
                     PriceListViews(data: $0)
+                    Divider()
                 }
             }
             .padding()
             .background(Color.white)
             .cornerRadius(18)
             
-            
             Button {
-                
+                viewModel.fetchCurrentPrice(nil)
             } label: {
                 Text("Refresh")
                     .font(.title3.bold())
@@ -53,5 +52,8 @@ struct CurrentPriceContentView: View {
                maxHeight: .infinity,
                alignment: .top)
         .background(Color(uiColor: .systemGray6))
+        .onAppear(perform: {
+            viewModel.askLocationPermission()
+        })
     }
 }

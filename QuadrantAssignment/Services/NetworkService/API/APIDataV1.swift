@@ -17,7 +17,7 @@ public struct APIDataV1<T: Decodable>: APIDataProtocol {
         var components: URLComponents = URLComponents()
         components.scheme = "https"
         components.host = "\(tempSubDomain).\(tempDomain)"
-        components.path = "\(path)/v1"
+        components.path = "/v1/\(path)"
         components.queryItems = query.keys.map { key in
             URLQueryItem(name: key, value: query[key]?.description)
         }

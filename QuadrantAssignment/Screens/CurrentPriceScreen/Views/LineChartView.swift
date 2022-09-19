@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct LineChartView: View {
-    var data: [CGFloat]
+    var data: [Double]
     
     @State var currentPlot = ""
     @State var offset: CGSize = .zero
@@ -19,7 +19,7 @@ struct LineChartView: View {
             let height = proxy.size.height
             let width = (proxy.size.width) / CGFloat(data.count - 1)
             
-            let maxPoint = (data.max() ?? 0) + 100
+            let maxPoint = (data.max().ifNil(0)) + 100
             let points = data.enumerated().compactMap { item -> CGPoint in
                 let progress = item.element / maxPoint
                 let pathHeight = progress * height
@@ -47,8 +47,6 @@ struct LineChartView: View {
                         endPoint: .trailing
                     )
                 )
-                
-                
             }
             .overlay(
                 VStack(spacing: 0) {
@@ -109,7 +107,7 @@ struct LineChartView: View {
         }
         .overlay(
             VStack(alignment: .leading) {
-                let max = data.max() ?? 0
+                let max = data.max().ifNil(0)
                 
                 Text("\(max)")
                     .font((.caption.bold()))
@@ -125,7 +123,3 @@ struct LineChartView: View {
         .padding(.horizontal, 10)
     }
 }
-
-public let samplePlot: [CGFloat] = [
-    100, 200, 300, 400, 500, 120, 230, 603
-]
